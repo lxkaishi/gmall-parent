@@ -1,0 +1,15 @@
+{
+  "id": null,
+  "attrName": "哈哈",
+  "category1Id": 0,
+  "category2Id": 0,
+  "category3Id": 0,
+  "attrValueList": [
+    {
+      "valueName": "哈哈",
+      "edit": false
+    }
+  ],
+  "categoryId": 2,
+  "categoryLevel": 1
+}

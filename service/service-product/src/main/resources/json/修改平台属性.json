@@ -1,0 +1,25 @@
+{
+  "id": 13,
+  "attrName": "wifidd",
+  "category1Id": 0,
+  "category2Id": 0,
+  "category3Id": 0,
+  "attrValueList": [
+    {
+      "id": 64,
+      "valueName": "wifi6",
+      "attrId": 13
+    },
+    {
+      "id": 65,
+      "valueName": "wifi5",
+      "attrId": 13
+    },
+    {
+      "valueName": "dD",
+      "edit": false
+    }
+  ],
+  "categoryId": 2,
+  "categoryLevel": 1
+}

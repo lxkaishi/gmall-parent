@@ -7,6 +7,8 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * @author lxstart
  * @description
@@ -78,5 +80,16 @@ public class TrademarkController {
 
         baseTrademarkService.updateById(baseTrademark);
         return Result.ok();
+    }
+
+    /**
+     * 获取所有的品牌列表
+     * @return
+     */
+    @GetMapping("/baseTrademark/getTrademarkList")
+    public Result getTrademarkList(){
+
+        List<BaseTrademark> trademarkList = baseTrademarkService.list();
+        return Result.ok(trademarkList);
     }
 }

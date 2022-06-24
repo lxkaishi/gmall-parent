@@ -1,0 +1,50 @@
+{
+  "id": null,
+  "spuId": 28,
+  "price": "1999",
+  "skuName": "黑鲨8+256",
+  "weight": "1",
+  "skuDesc": "发发发发发",
+  "category3Id": 61,
+  "skuAttrValueList": [
+    {
+      "attrId": "1",
+      "valueId": "4"
+    },
+    {
+      "attrId": "2",
+      "valueId": "9"
+    },
+    {
+      "attrId": "3",
+      "valueId": "19"
+    },
+    {
+      "attrId": "4",
+      "valueId": "26"
+    },
+    {
+      "attrId": "5",
+      "valueId": "34"
+    },
+    {
+      "attrId": "11",
+      "valueId": "60"
+    },
+    {
+      "attrId": "12",
+      "valueId": "62"
+    }
+  ],
+  "skuSaleAttrValueList": [],
+  "skuImageList": [
+    {
+      "spuImgId": 280,
+      "imgName": "c7fbcdc5c597d3b9.jpg",
+      "imgUrl": "http://192.168.30.100:9000/gmall/9c0f2a99b3de4d9fb1a58f3d074c5f71_c7fbcdc5c597d3b9.jpg",
+      "isDefault": 1
+    }
+  ],
+  "skuDefaultImg": "http://192.168.30.100:9000/gmall/9c0f2a99b3de4d9fb1a58f3d074c5f71_c7fbcdc5c597d3b9.jpg",
+  "tmId": 15
+}

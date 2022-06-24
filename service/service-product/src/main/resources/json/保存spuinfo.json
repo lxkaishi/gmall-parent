@@ -1,0 +1,75 @@
+{
+  "id": null,
+  "spuName": "888",
+  "description": "魅族 18s 8GB+128GB 等风 5G 骁龙888+ 36W超充 6.2英寸2K曲面屏 6400W高清三摄光学防抖 拍照手机",
+  "category3Id": 61,
+  "spuImageList": [
+    {
+      "imgName": "bfe105820b1b0796.jpg",
+      "imgUrl": "http://192.168.30.100:9000/gmall/85611312a2c943cdbc713d4d9e272da5_bfe105820b1b0796.jpg"
+    },
+    {
+      "imgName": "c7fbcdc5c597d3b9.jpg",
+      "imgUrl": "http://192.168.30.100:9000/gmall/9c0f2a99b3de4d9fb1a58f3d074c5f71_c7fbcdc5c597d3b9.jpg"
+    },
+    {
+      "imgName": "f180d24ca6b865e2 (1).jpg",
+      "imgUrl": "http://192.168.30.100:9000/gmall/521a8d79f464469da105e281fd30ed8e_f180d24ca6b865e2 (1).jpg"
+    },
+    {
+      "imgName": "d7ba260ab36dcea0.jpg",
+      "imgUrl": "http://192.168.30.100:9000/gmall/fbbd095f788a453d89b47ac92278eb01_d7ba260ab36dcea0.jpg"
+    },
+    {
+      "imgName": "4.png",
+      "imgUrl": "http://192.168.30.100:9000/gmall/6860f93ff7a54eeda2d6e3263b1e41b5_4.png"
+    },
+    {
+      "imgName": "5.png",
+      "imgUrl": "http://192.168.30.100:9000/gmall/989a52f18c7d4b8b89869032eca2ba22_5.png"
+    },
+    {
+      "imgName": "1.png",
+      "imgUrl": "http://192.168.30.100:9000/gmall/df781e026fef471ca5ec73d3d1592c15_1.png"
+    },
+    {
+      "imgName": "2.png",
+      "imgUrl": "http://192.168.30.100:9000/gmall/3b25e2eec3aa4287b026af5f2a0791f2_2.png"
+    },
+    {
+      "imgName": "3.png",
+      "imgUrl": "http://192.168.30.100:9000/gmall/1eb2ee376e004413a23ab3cb252993a1_3.png"
+    }
+  ],
+  "spuSaleAttrList": [
+    {
+      "baseSaleAttrId": "1",
+      "saleAttrName": "选择颜色",
+      "spuSaleAttrValueList": [
+        {
+          "baseSaleAttrId": "1",
+          "saleAttrValueName": "蓝色"
+        },
+        {
+          "baseSaleAttrId": "1",
+          "saleAttrValueName": "白色"
+        }
+      ]
+    },
+    {
+      "baseSaleAttrId": "2",
+      "saleAttrName": "选择版本",
+      "spuSaleAttrValueList": [
+        {
+          "baseSaleAttrId": "2",
+          "saleAttrValueName": "16+512"
+        },
+        {
+          "baseSaleAttrId": "2",
+          "saleAttrValueName": "8+256"
+        }
+      ]
+    }
+  ],
+  "tmId": 15
+}

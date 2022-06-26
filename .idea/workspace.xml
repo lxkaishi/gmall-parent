@@ -2,24 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b136b5b-8249-4a59-afe6-e37bdafcafd5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/controller/TrademarkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/controller/TrademarkController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/mapper/SkuInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/mapper/SkuInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/server-gateway/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-gateway/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/server-gateway/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/mapper/BaseCategory1Mapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/mapper/SpuSaleAttrMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/mapper/SpuSaleAttrMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/SkuInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/SkuInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/SpuInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/SpuInfoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/SpuSaleAttrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/SpuSaleAttrService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/SkuInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/SkuInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/SpuInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/SpuInfoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/SpuSaleAttrServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/SpuSaleAttrServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/resources/mapper/SkuInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/resources/mapper/SkuInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/resources/mapper/FileService.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/resources/mapper/CategoryBizService.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-product/src/main/resources/mapper/SpuSaleAttrMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/resources/mapper/SpuSaleAttrMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/mapper/BaseCategory1Mapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/mapper/BaseCategory1Mapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/mapper/SpuSaleAttrMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/mapper/SpuSaleAttrMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/SkuInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/SkuInfoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/SpuInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/SpuInfoService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/SpuSaleAttrService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/SpuSaleAttrService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/SkuInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/SkuInfoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/SpuInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/SpuInfoServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/SpuSaleAttrServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/SpuSaleAttrServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/mapper/SpuSaleAttrMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/mapper/SpuSaleAttrMapper.xml" afterDir="false" />
     </list>
@@ -63,15 +62,15 @@
         <item name="@192.168.30.100" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="gmall_product: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="views" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="@192.168.30.100" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="gmall_product: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="base_attr_value: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="views" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="base_category_view: view" type="d3266483:MysqlImplModel$View" />
       </path>
     </expand>
     <select />
@@ -79,6 +78,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Mybatis Mapper" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -139,7 +139,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -163,7 +163,9 @@
       <method v="2" />
     </configuration>
     <configuration name="mall" type="CompoundRunConfigurationType">
+      <toRun name="FrontMainApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="GatewayMainApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="ItemMainApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="ProductMainApplication" type="SpringBootApplicationConfigurationType" />
       <method v="2" />
     </configuration>
@@ -198,6 +200,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FrontMainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="web-front" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.gmall.front.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gmall.front.FrontMainApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx100m -Xms100m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GatewayMainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="server-gateway" />
       <extension name="coverage">
@@ -212,6 +229,21 @@
       <RunnerSettings RunnerId="Debug with VisualVM">
         <option name="visualVMId" value="908579784061800" />
       </RunnerSettings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ItemMainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="service-item" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.gmall.item.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gmall.item.ItemMainApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx100m -Xms100m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -240,6 +272,8 @@
       <item itemvalue="JUnit.MinioTest" />
       <item itemvalue="Spring Boot.GatewayMainApplication" />
       <item itemvalue="Spring Boot.ProductMainApplication" />
+      <item itemvalue="Spring Boot.FrontMainApplication" />
+      <item itemvalue="Spring Boot.ItemMainApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -247,7 +281,6 @@
         <item itemvalue="JUnit.MinioTest.testUpload" />
         <item itemvalue="JUnit.MinioTest" />
         <item itemvalue="JUnit.MinioTest.testUpload" />
-        <item itemvalue="JUnit.MinioTest" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +288,7 @@
     <option name="viewStates">
       <list>
         <serviceView>
-          <option name="contentProportion" value="0.21448088" />
+          <option name="contentProportion" value="0.20423497" />
           <treeState>
             <expand>
               <path>
@@ -302,6 +335,20 @@
       <workItem from="1655964240858" duration="11845000" />
       <workItem from="1655980794580" duration="1092000" />
       <workItem from="1655986749271" duration="4166000" />
+      <workItem from="1656031203210" duration="901000" />
+      <workItem from="1656033394148" duration="896000" />
+      <workItem from="1656050234642" duration="690000" />
+      <workItem from="1656051052957" duration="1327000" />
+      <workItem from="1656063351427" duration="230000" />
+      <workItem from="1656065427575" duration="122000" />
+      <workItem from="1656134665667" duration="30000" />
+      <workItem from="1656150247574" duration="6403000" />
+      <workItem from="1656170139760" duration="510000" />
+      <workItem from="1656170660701" duration="6232000" />
+      <workItem from="1656204557420" duration="246000" />
+      <workItem from="1656237732847" duration="158000" />
+      <workItem from="1656238055638" duration="10041000" />
+      <workItem from="1656255862795" duration="2151000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <created>1655812307357</created>
@@ -331,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655968427141</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="后台管理系统完成">
+      <created>1656031255956</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1656031255956</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +410,8 @@
     <MESSAGE value="项目初始化" />
     <MESSAGE value="写了平台属性的增删改查" />
     <MESSAGE value="品牌CRUD" />
-    <option name="LAST_COMMIT_MESSAGE" value="品牌CRUD" />
+    <MESSAGE value="后台管理系统完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="后台管理系统完成" />
   </component>
   <component name="WindowStateProjectService">
     <state x="407" y="0" width="735" height="834" key="#GatewayMainApplication" timestamp="1655731546721">
@@ -371,88 +426,108 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="407" y="68" width="735" height="697" key="#ProductMainApplication/0.0.1536.834@0.0.1536.834" timestamp="1655731533404" />
-    <state x="361" y="74" key="#Project_Structure" timestamp="1655810727779">
+    <state x="361" y="74" key="#Project_Structure" timestamp="1656150339576">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="73" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1655722052719" />
-    <state x="361" y="74" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1655810727779" />
-    <state x="223" y="75" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1655773565577">
+    <state x="361" y="74" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1656150339576" />
+    <state x="-54" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1656243968329">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="223" y="75" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1655773565577" />
-    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser" timestamp="1655990354762">
+    <state x="-54" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1656243968329" />
+    <state x="471" y="225" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1656150410332">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1655990354762" />
-    <state x="316" y="13" key="CommitChangelistDialog2" timestamp="1655968425892">
+    <state x="471" y="225" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1656150410332" />
+    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser" timestamp="1656256281303">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="316" y="13" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1655968425892" />
-    <state width="1149" height="325" key="GridCell.Tab.0.bottom" timestamp="1655990960028">
+    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1656256281303" />
+    <state x="370" y="345" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1656034666398">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1149" height="325" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1655990960028" />
-    <state width="1149" height="325" key="GridCell.Tab.0.center" timestamp="1655990960028">
+    <state x="370" y="345" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.834@0.0.1536.834" timestamp="1656034666398" />
+    <state x="499" y="166" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1656239259417">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1149" height="325" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1655990960028" />
-    <state width="1149" height="325" key="GridCell.Tab.0.left" timestamp="1655990960028">
+    <state x="499" y="166" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1656239259417" />
+    <state x="316" y="13" width="1122" height="812" key="CommitChangelistDialog2" timestamp="1656031254722">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1149" height="325" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1655990960028" />
-    <state width="1149" height="325" key="GridCell.Tab.0.right" timestamp="1655990960028">
+    <state x="316" y="13" width="1122" height="812" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1656031254722" />
+    <state x="549" y="175" key="FileChooserDialogImpl" timestamp="1656171331949">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1149" height="325" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1655990960028" />
-    <state width="1149" height="325" key="GridCell.Tab.1.bottom" timestamp="1655990960030">
+    <state x="549" y="175" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1656171331949" />
+    <state width="1164" height="39" key="GridCell.Tab.0.bottom" timestamp="1656258031259">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1149" height="325" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1655990960030" />
-    <state width="1149" height="325" key="GridCell.Tab.1.center" timestamp="1655990960028">
+    <state width="1164" height="39" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1656258031259" />
+    <state width="1164" height="39" key="GridCell.Tab.0.center" timestamp="1656258031259">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1149" height="325" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1655990960028" />
-    <state width="1149" height="325" key="GridCell.Tab.1.left" timestamp="1655990960028">
+    <state width="1164" height="39" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1656258031259" />
+    <state width="1164" height="39" key="GridCell.Tab.0.left" timestamp="1656258031259">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1149" height="325" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1655990960028" />
-    <state width="1149" height="325" key="GridCell.Tab.1.right" timestamp="1655990960030">
+    <state width="1164" height="39" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1656258031259" />
+    <state width="1164" height="39" key="GridCell.Tab.0.right" timestamp="1656258031259">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1149" height="325" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1655990960030" />
+    <state width="1164" height="39" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1656258031259" />
+    <state width="1164" height="39" key="GridCell.Tab.1.bottom" timestamp="1656258031259">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1164" height="39" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1656258031259" />
+    <state width="1164" height="39" key="GridCell.Tab.1.center" timestamp="1656258031259">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1164" height="39" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1656258031259" />
+    <state width="1164" height="39" key="GridCell.Tab.1.left" timestamp="1656258031259">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1164" height="39" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1656258031259" />
+    <state width="1164" height="39" key="GridCell.Tab.1.right" timestamp="1656258031259">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1164" height="39" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1656258031259" />
     <state width="221" height="477" key="HiddenNamespacesPopup" timestamp="1655774086711">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="221" height="477" key="HiddenNamespacesPopup/0.0.1536.834@0.0.1536.834" timestamp="1655774086711" />
-    <state x="-1" y="124" key="SettingsEditor" timestamp="1655967626828">
+    <state x="299" y="75" key="Maven.ArtifactSearchDialog" timestamp="1656243381524">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="299" y="75" key="Maven.ArtifactSearchDialog/0.0.1536.834@0.0.1536.834" timestamp="1656243381524" />
+    <state x="272" y="62" key="SettingsEditor" timestamp="1656051037001">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="272" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1655721460658" />
-    <state x="-1" y="124" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1655967626828" />
-    <state x="361" y="153" key="Vcs.Push.Dialog.v2" timestamp="1655968642577">
+    <state x="272" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1656051037001" />
+    <state x="361" y="153" key="Vcs.Push.Dialog.v2" timestamp="1656031282880">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1655968642577" />
+    <state x="361" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1656031282880" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1655721883295">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1655721883295" />
-    <state x="178" y="117" key="new project wizard" timestamp="1655730771431">
+    <state x="178" y="117" key="new project wizard" timestamp="1656242736579">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="178" y="116" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1655722505854" />
-    <state x="178" y="117" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1655730771431" />
+    <state x="178" y="117" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1656242736579" />
     <state x="425" y="189" key="run.anything.popup" timestamp="1655987131028">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1655987131028" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1655988311807">
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1656241076118">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1655988311807" />
-    <state x="490" y="163" width="362" height="491" key="search.text.field" timestamp="1655899005677">
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1656241076118" />
+    <state x="490" y="163" width="362" height="491" key="search.text.field" timestamp="1656174250454">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="490" y="163" width="362" height="491" key="search.text.field/0.0.1536.834@0.0.1536.834" timestamp="1655899005677" />
+    <state x="490" y="163" width="362" height="491" key="search.text.field/0.0.1536.834@0.0.1536.834" timestamp="1656174250454" />
   </component>
 </project>

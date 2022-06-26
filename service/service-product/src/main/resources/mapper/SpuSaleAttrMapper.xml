@@ -5,10 +5,10 @@
 <mapper namespace="com.atguigu.gmall.product.mapper.SpuSaleAttrMapper">
 
     <resultMap id="BaseResultMap" type="com.atguigu.gmall.model.product.SpuSaleAttr">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="spuId" column="spu_id" jdbcType="BIGINT"/>
-            <result property="baseSaleAttrId" column="base_sale_attr_id" jdbcType="BIGINT"/>
-            <result property="saleAttrName" column="sale_attr_name" jdbcType="VARCHAR"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="spuId" column="spu_id" jdbcType="BIGINT"/>
+        <result property="baseSaleAttrId" column="base_sale_attr_id" jdbcType="BIGINT"/>
+        <result property="saleAttrName" column="sale_attr_name" jdbcType="VARCHAR"/>
     </resultMap>
 
     <!--    销售属性名和值定义结果集封装-->
@@ -31,5 +31,42 @@
                  left join spu_sale_attr_value ssav
                            on ssa.spu_id = ssav.spu_id and ssa.base_sale_attr_id = ssav.base_sale_attr_id
         where ssa.spu_id = #{spuId}
+    </select>
+
+
+    <select id="getSpuSaleAttrAndMarkSkuSaleValue" resultMap="SaleAttrNameAndValueResultMap">
+        select ssa.*,
+               ssav.id  vid,
+               ssav.sale_attr_value_name,
+               IF(skuav.id IS NULL, "0", "1") is_checked
+        from spu_sale_attr_value ssav
+                 left join spu_sale_attr ssa
+                           on ssa.spu_id = ssav.spu_id and ssa.base_sale_attr_id = ssav.base_sale_attr_id
+                 left join sku_sale_attr_value skuav
+                           on ssav.id = skuav.sale_attr_value_id and skuav.sku_id = #{skuId}
+        where ssav.spu_id = #{spuId}
+        order by ssav.base_sale_attr_id, ssav.id
+
+    </select>
+    <select id="getSpudeAllSkuSaleAttrAndValue" resultType="com.atguigu.gmall.model.vo.SkuValue"
+            parameterType="java.lang.Long">
+
+        select abc.sku_id,
+               GROUP_CONCAT(
+                   DISTINCT abc.sale_attr_value_id
+                   ORDER BY abc.sale_attr_value_id ASC SEPARATOR '|'
+               ) sku_values
+        from (select ssav.*,
+                     spuav.sale_attr_name,
+                     spuav.sale_attr_value_name
+              from sku_sale_attr_value ssav
+                       left join spu_sale_attr_value spuav
+                                 on spuav.spu_id = ssav.spu_id
+                                     and ssav.sale_attr_value_id = spuav.id
+              WHERE ssav.spu_id = #{spuId}
+              ORDER BY ssav.sku_id,
+                       spuav.base_sale_attr_id,
+                       ssav.sale_attr_value_id) abc
+        GROUP BY abc.sku_id
     </select>
 </mapper>

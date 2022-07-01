@@ -17,7 +17,7 @@ import java.util.List;
  */
 @RequestMapping("/rpc/inner/product")
 @RestController
-public class categoryRpcController {
+public class CategoryRpcController {
 
     @Autowired
     CategoryBizService categoryBizService;

@@ -7,14 +7,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="server-gateway" />
         <module name="common-util" />
         <module name="web-front" />
-        <module name="server-gateway" />
-        <module name="model" />
-        <module name="service-util" />
         <module name="service-product" />
-        <module name="service-item" />
         <module name="mall-feign-client" />
+        <module name="model" />
+        <module name="service-item" />
+        <module name="service-util" />
       </profile>
     </annotationProcessing>
   </component>

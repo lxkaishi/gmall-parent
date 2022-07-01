@@ -27,4 +27,8 @@
     <update id="updateSaleStatus">
         update sku_info set is_sale=#{status} where id=#{skuId}
     </update>
+    <select id="getSkuIds" resultType="java.lang.Long">
+        select id from sku_info
+    </select>
+
 </mapper>

@@ -75,6 +75,10 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo>
         skuInfoMapper.updateSaleStatus(skuId,0);
     }
 
+    @Override
+    public List<Long> getSkuIds() {
+        return skuInfoMapper.getSkuIds();
+    }
 }
 
 

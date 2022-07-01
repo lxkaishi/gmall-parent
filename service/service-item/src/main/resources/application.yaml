@@ -5,3 +5,8 @@ spring:
     exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
   main:
     allow-bean-definition-overriding: true
+
+  redis:
+    host: 192.168.30.100
+    port: 6379
+    password: "!Lfy123123@"

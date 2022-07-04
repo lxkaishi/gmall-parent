@@ -1,16 +1,16 @@
 package com.atguigu.gmall.item;
 
-import com.atguigu.gmall.common.annotation.EnableRedisson;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
  * @author: lxstart
  * @description:
  * @create: 2022-06-26
  */
-@EnableRedisson
+@EnableAspectJAutoProxy
 @SpringCloudApplication
 @EnableFeignClients(basePackages = {"com.atguigu.gmall.feign.product"})
 public class ItemMainApplication {

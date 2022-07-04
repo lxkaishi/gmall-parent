@@ -11,6 +11,7 @@
         <module name="common-util" />
         <module name="web-front" />
         <module name="service-product" />
+        <module name="mall-cache-starter" />
         <module name="mall-feign-client" />
         <module name="model" />
         <module name="service-item" />
@@ -22,6 +23,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common" options="-parameters" />
       <module name="common-util" options="-parameters" />
+      <module name="mall-cache-starter" options="-parameters" />
       <module name="mall-feign-client" options="-parameters" />
       <module name="model" options="-parameters" />
       <module name="server-gateway" options="-parameters" />

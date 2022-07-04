@@ -1,6 +1,5 @@
 package com.atguigu.gmall.product;
 
-import com.atguigu.gmall.common.annotation.EnableRedisson;
 import com.atguigu.gmall.common.config.Swagger2Config;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -12,7 +11,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @author lxstart
  * @create 2022-06-20 21:15
  */
-@EnableRedisson
+
 @Import(Swagger2Config.class)
 @EnableTransactionManagement  //开启基于注解的自动事务管理
 @MapperScan(basePackages = "com.atguigu.gmall.product.mapper")

@@ -3,12 +3,14 @@ package com.atguigu.gmall.item.service.impl;
 import com.atguigu.gmall.common.constant.RedisConst;
 import com.atguigu.gmall.common.result.Result;
 import com.atguigu.gmall.feign.product.SkuFeignClent;
-import com.atguigu.gmall.item.component.CacheService;
 import com.atguigu.gmall.item.service.ItemService;
 import com.atguigu.gmall.model.product.SkuInfo;
 import com.atguigu.gmall.model.product.SpuSaleAttr;
 import com.atguigu.gmall.model.vo.CategoryView;
 import com.atguigu.gmall.model.vo.SkuDetailVo;
+import com.atguigu.gmall.starter.cache.annotation.Cache;
+import com.atguigu.gmall.starter.cache.component.CacheService;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RBloomFilter;
 import org.redisson.api.RLock;
@@ -17,6 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -38,8 +41,16 @@ public class ItemServiceImpl implements ItemService {
     RedissonClient redissonClient;
 
 
+    @Cache(key = RedisConst.SKU_INFO_CACHE_KEY_PREFIX+"#{#params[0]}",
+            bloomName = RedisConst.SKU_BLOOM_FILTER_NAME,
+            bloomIf = "#{#params[0]}",
+            ttl = RedisConst.SKU_INFO_CACHE_TIMEOUT)
     @Override
-    public SkuDetailVo getSkuDetail(Long skuId) {
+    public SkuDetailVo getSkuDetail(Long skuId){
+        return getItemDetailFromRpc(skuId);
+    }
+
+    public SkuDetailVo getSkuDetailV1(Long skuId){
 
         String cacheKey = RedisConst.SKU_INFO_CACHE_KEY_PREFIX + skuId;
         SkuDetailVo data = cacheService.getData(cacheKey, SkuDetailVo.class);
@@ -80,34 +91,52 @@ public class ItemServiceImpl implements ItemService {
     }
 
 
-    public SkuDetailVo getItemDetailFromRpc(Long skuId) {
+    @SneakyThrows
+    public SkuDetailVo getItemDetailFromRpc(Long skuId){
 
         // 1.
         SkuDetailVo vo = new SkuDetailVo();
 
-        Result<SkuInfo> skuInfo = skuFeignClent.getSkuInfo(skuId);
-        SkuInfo info = skuInfo.getData();
-        vo.setSkuInfo(info);
-
-        // 2.
-        Long category3Id = info.getCategory3Id();
-        // 根据三级分类id查询完整分类信息
-        Result<CategoryView> categoryView = skuFeignClent.getCategoryViewDo(category3Id);
-        vo.setCategoryView(categoryView.getData());
+        CompletableFuture<SkuInfo> baseInfoFuture = CompletableFuture.supplyAsync(() -> {
+            Result<SkuInfo> skuInfo = skuFeignClent.getSkuInfo(skuId);
+            SkuInfo info = skuInfo.getData();
+            vo.setSkuInfo(info);
+            return info;
+        });
 
 
-        vo.setPrice(info.getPrice());
+        CompletableFuture<Void> categoryFuture = baseInfoFuture.thenAcceptAsync(info -> {
+            // 2.
+            Long category3Id = info.getCategory3Id();
+            // 根据三级分类id查询完整分类信息
+            Result<CategoryView> categoryView = skuFeignClent.getCategoryViewDo(category3Id);
+            vo.setCategoryView(categoryView.getData());
+        });
 
-        Long spuId = info.getSpuId();
-        Result<List<SpuSaleAttr>> saleAttr = skuFeignClent.getSaleAttr(skuId, spuId);
-        if (saleAttr.isOk()) {
-            vo.setSpuSaleAttrList(saleAttr.getData());
-        }
 
-        Result<String> value = skuFeignClent.getSpudeAllSkuSaleAttrAndValue(spuId);
-        vo.setValuesSkuJson(value.getData());
+        CompletableFuture<Void> priceFuture = baseInfoFuture.thenAcceptAsync(info -> {
+            vo.setPrice(info.getPrice());
+        });
 
+
+        CompletableFuture<Void> saleAttrFuture = baseInfoFuture.thenAcceptAsync(info -> {
+            Long spuId = info.getSpuId();
+            Result<List<SpuSaleAttr>> saleAttr = skuFeignClent.getSaleAttr(skuId, spuId);
+            if (saleAttr.isOk()) {
+                vo.setSpuSaleAttrList(saleAttr.getData());
+            }
+        });
+
+
+        CompletableFuture<Void> skuOtherFuture = baseInfoFuture.thenAcceptAsync(info -> {
+            Result<String> value = skuFeignClent.getSpudeAllSkuSaleAttrAndValue(info.getSpuId());
+            vo.setValuesSkuJson(value.getData());
+        });
+
+        CompletableFuture.allOf(skuOtherFuture,saleAttrFuture,priceFuture,categoryFuture).get();
 
         return vo;
     }
+
+
 }

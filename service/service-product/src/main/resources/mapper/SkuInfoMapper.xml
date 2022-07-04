@@ -30,5 +30,10 @@
     <select id="getSkuIds" resultType="java.lang.Long">
         select id from sku_info
     </select>
+    <select id="getSkuPrice" resultType="java.math.BigDecimal">
+        select price
+        from sku_info
+        where id = #{skuId}
+    </select>
 
 </mapper>

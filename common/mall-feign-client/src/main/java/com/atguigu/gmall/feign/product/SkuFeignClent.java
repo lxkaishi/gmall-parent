@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -32,4 +33,7 @@ public interface SkuFeignClent {
 
     @GetMapping("/spu/skus/saleattrvalue/json/{spuId}")
     Result<String> getSpudeAllSkuSaleAttrAndValue(@PathVariable("spuId") Long spuId);
+
+    @GetMapping("/sku/price/{skuId}")
+    Result<BigDecimal> getSkuPrice(@PathVariable("skuId") Long skuId);
 }

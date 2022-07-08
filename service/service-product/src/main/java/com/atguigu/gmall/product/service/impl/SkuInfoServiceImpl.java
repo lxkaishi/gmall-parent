@@ -1,6 +1,8 @@
 package com.atguigu.gmall.product.service.impl;
 
 import com.atguigu.gmall.common.constant.RedisConst;
+import com.atguigu.gmall.feign.search.SearchFeignClient;
+import com.atguigu.gmall.model.list.Goods;
 import com.atguigu.gmall.model.product.SkuAttrValue;
 import com.atguigu.gmall.model.product.SkuImage;
 import com.atguigu.gmall.model.product.SkuInfo;
@@ -13,6 +15,8 @@ import com.atguigu.gmall.product.service.SkuSaleAttrValueService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
+import org.redisson.api.RBloomFilter;
+import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
@@ -44,6 +48,12 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo>
     @Autowired
     StringRedisTemplate redisTemplate;
 
+    @Autowired
+    SearchFeignClient searchFeignClient;
+
+    @Autowired
+    RedissonClient redissonClient;
+
     static ScheduledExecutorService threadPool = Executors.newScheduledThreadPool(4);
 
     @Transactional
@@ -72,18 +82,29 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo>
         }
         skuSaleAttrValueService.saveBatch(saleAttrValueList);
         log.info("sku信息保存成功：生成的skuId：{}",id);
+
+        //添到布隆过滤器中
+        RBloomFilter<Object> filter = redissonClient.getBloomFilter(RedisConst.SKU_BLOOM_FILTER_NAME);
+        filter.add(id);
     }
 
     @Override
     public void upSku(Long skuId) {
-        //TODO 连接ES保存这个商品数据
+        //1、数据库修改状态
         skuInfoMapper.updateSaleStatus(skuId,1);
+        //2、数据保存到es中
+        Goods goods = this.getGoodsInfoBySkuId(skuId);
+        //3、远程调用检索服务进行上架
+        searchFeignClient.upGoods(goods);
     }
 
     @Override
     public void downSku(Long skuId) {
-        //TODO 连接ES删除这个商品数据
+        //1、修改数据库状态
         skuInfoMapper.updateSaleStatus(skuId,0);
+
+        //2、链接es远程下架
+        searchFeignClient.downGoods(skuId);
     }
 
     @Override
@@ -111,6 +132,14 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo>
     public BigDecimal getSkuPrice(Long skuId) {
 
         return skuInfoMapper.getSkuPrice(skuId);
+    }
+
+    @Override
+    public Goods getGoodsInfoBySkuId(Long skuId) {
+        //es中一个sku的详情。对应一个 Goods
+
+        Goods goods = skuInfoMapper.getGoodsInfoBySkuId(skuId);
+        return goods;
     }
 }
 

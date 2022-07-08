@@ -14,10 +14,20 @@ spring:
             allowedHeaders: "*"
             allowedCredentials: true
       routes:
+        - id: incr_test
+            uri: lb://service-product
+            predicates:
+              - Path=/incr
+
         - id: product_route
           uri: lb://service-product
           predicates:
             - Path=/admin/product/**
+
+        - id: user_route
+            uri: lb://service-user
+            predicates:
+              - Path=/api/user/**
 
         - id: front_route
           uri: lb://web-front

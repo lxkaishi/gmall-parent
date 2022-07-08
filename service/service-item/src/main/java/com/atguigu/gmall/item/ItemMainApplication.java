@@ -12,7 +12,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  */
 @EnableAspectJAutoProxy
 @SpringCloudApplication
-@EnableFeignClients(basePackages = {"com.atguigu.gmall.feign.product"})
+@EnableFeignClients(basePackages = {"com.atguigu.gmall.feign.product","com.atguigu.gmall.feign.search"})
 public class ItemMainApplication {
     
     public static void main(String[] args) {

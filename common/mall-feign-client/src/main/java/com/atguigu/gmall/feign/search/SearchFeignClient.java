@@ -39,4 +39,8 @@ public interface SearchFeignClient {
      */
     @GetMapping("/down/{skuId}")
     Result downGoods(@PathVariable("skuId") Long skuId);
+
+    @GetMapping("/incr/hotscore/{skuId}")
+    Result incrHotScore(@PathVariable("skuId") Long skuId,
+                               @RequestParam("score") Long score);
 }

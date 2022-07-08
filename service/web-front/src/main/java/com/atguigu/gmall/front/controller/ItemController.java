@@ -51,10 +51,10 @@ public class ItemController {
             //sku信息
             model.addAttribute("skuInfo",data.getSkuInfo());
 
-            Result<BigDecimal> price = skuFeignClent.getSkuPrice(skuId);
+            Result<BigDecimal> skuPrice = skuFeignClent.getSkuPrice(skuId);
 
             //sku价格
-            model.addAttribute("price",price);
+            model.addAttribute("price",skuPrice.getData());
 
             //spu定义的所有销售属性名和值
             model.addAttribute("spuSaleAttrList",data.getSpuSaleAttrList());

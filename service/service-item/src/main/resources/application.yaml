@@ -10,3 +10,11 @@ spring:
     host: 192.168.30.100
     port: 6379
     password: "!Lfy123123@"
+
+
+app:
+  threadpool:
+    core-pool-size: 4
+    maximum-pool-size: 8
+    work-queue-size: 200
+    keep-alive-time: 60

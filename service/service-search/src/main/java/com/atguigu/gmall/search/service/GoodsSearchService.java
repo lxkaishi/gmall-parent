@@ -25,4 +25,7 @@ public interface GoodsSearchService {
      * @return
      */
     SearchResponseVo search(SearchParam param);
+
+    void incrHotScore(Long skuId, Long score);
+
 }

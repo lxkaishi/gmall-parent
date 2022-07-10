@@ -215,7 +215,7 @@ public class GoodsSearchServiceImpl implements GoodsSearchService {
         //回显orderMap
         String order = param.getOrder(); //order=2:asc  order=1:desc
         OrderMap orderMap = new OrderMap();
-        if(!StringUtils.isEmpty(order)){
+        if(!StringUtils.isEmpty(order) && "null".equalsIgnoreCase(order)){
             orderMap.setType(order.split(":")[0]);
             orderMap.setSort(order.split(":")[1]);
         }

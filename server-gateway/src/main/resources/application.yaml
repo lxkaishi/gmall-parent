@@ -15,9 +15,9 @@ spring:
             allowedCredentials: true
       routes:
         - id: incr_test
-            uri: lb://service-product
-            predicates:
-              - Path=/incr
+          uri: lb://service-product
+          predicates:
+            - Path=/incr
 
         - id: product_route
           uri: lb://service-product
@@ -25,11 +25,20 @@ spring:
             - Path=/admin/product/**
 
         - id: user_route
-            uri: lb://service-user
-            predicates:
-              - Path=/api/user/**
+          uri: lb://service-user
+          predicates:
+            - Path=/api/user/**
 
         - id: front_route
           uri: lb://web-front
           predicates:
             - Host=**.gmall.com
+
+app:
+  auth:
+    login-page: http://passport.gmall.com/login.html
+    login-url:
+      - /order/**
+      - /incr
+    no-auth-url:
+      - /rpc/inner/**   #内部的rpc请求浏览器不能直接访问

@@ -2,7 +2,7 @@ package com.atguigu.gmall.front.controller;
 
 import com.atguigu.gmall.common.result.Result;
 import com.atguigu.gmall.feign.item.ItemFeignClient;
-import com.atguigu.gmall.feign.product.SkuFeignClent;
+import com.atguigu.gmall.feign.product.SkuFeignClient;
 import com.atguigu.gmall.model.vo.SkuDetailVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,7 +23,7 @@ public class ItemController {
     @Autowired
     ItemFeignClient itemFeignClient;
     @Autowired
-    SkuFeignClent skuFeignClent;
+    SkuFeignClient skuFeignClient;
     /**
      * 查询sku详情
      * @return
@@ -51,7 +51,7 @@ public class ItemController {
             //sku信息
             model.addAttribute("skuInfo",data.getSkuInfo());
 
-            Result<BigDecimal> skuPrice = skuFeignClent.getSkuPrice(skuId);
+            Result<BigDecimal> skuPrice = skuFeignClient.getSkuPrice(skuId);
 
             //sku价格
             model.addAttribute("price",skuPrice.getData());

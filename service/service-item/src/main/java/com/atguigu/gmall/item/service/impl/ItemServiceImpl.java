@@ -2,7 +2,7 @@ package com.atguigu.gmall.item.service.impl;
 
 import com.atguigu.gmall.common.constant.RedisConst;
 import com.atguigu.gmall.common.result.Result;
-import com.atguigu.gmall.feign.product.SkuFeignClent;
+import com.atguigu.gmall.feign.product.SkuFeignClient;
 import com.atguigu.gmall.feign.search.SearchFeignClient;
 import com.atguigu.gmall.item.service.ItemService;
 import com.atguigu.gmall.model.product.SkuInfo;
@@ -35,7 +35,7 @@ import java.util.concurrent.TimeUnit;
 public class ItemServiceImpl implements ItemService {
 
     @Autowired
-    SkuFeignClent skuFeignClent;
+    SkuFeignClient skuFeignClient;
 
     @Autowired
     CacheService cacheService;
@@ -123,7 +123,7 @@ public class ItemServiceImpl implements ItemService {
         SkuDetailVo vo = new SkuDetailVo();
 
         CompletableFuture<SkuInfo> baseInfoFuture = CompletableFuture.supplyAsync(() -> {
-            Result<SkuInfo> skuInfo = skuFeignClent.getSkuInfo(skuId);
+            Result<SkuInfo> skuInfo = skuFeignClient.getSkuInfo(skuId);
             SkuInfo info = skuInfo.getData();
             vo.setSkuInfo(info);
             return info;
@@ -134,7 +134,7 @@ public class ItemServiceImpl implements ItemService {
             // 2.
             Long category3Id = info.getCategory3Id();
             // 根据三级分类id查询完整分类信息
-            Result<CategoryView> categoryView = skuFeignClent.getCategoryViewDo(category3Id);
+            Result<CategoryView> categoryView = skuFeignClient.getCategoryViewDo(category3Id);
             vo.setCategoryView(categoryView.getData());
         });
 
@@ -146,7 +146,7 @@ public class ItemServiceImpl implements ItemService {
 
         CompletableFuture<Void> saleAttrFuture = baseInfoFuture.thenAcceptAsync(info -> {
             Long spuId = info.getSpuId();
-            Result<List<SpuSaleAttr>> saleAttr = skuFeignClent.getSaleAttr(skuId, spuId);
+            Result<List<SpuSaleAttr>> saleAttr = skuFeignClient.getSaleAttr(skuId, spuId);
             if (saleAttr.isOk()) {
                 vo.setSpuSaleAttrList(saleAttr.getData());
             }
@@ -154,7 +154,7 @@ public class ItemServiceImpl implements ItemService {
 
 
         CompletableFuture<Void> skuOtherFuture = baseInfoFuture.thenAcceptAsync(info -> {
-            Result<String> value = skuFeignClent.getSpudeAllSkuSaleAttrAndValue(info.getSpuId());
+            Result<String> value = skuFeignClient.getSpudeAllSkuSaleAttrAndValue(info.getSpuId());
             vo.setValuesSkuJson(value.getData());
         });
 

@@ -25,12 +25,23 @@ public class CartController {
         //获取当前用户信息. 隐式透传
 //        UserAuth auth = AuthContextHolder.getUserAuth();
 
-        //TODO 添加商品到购物车
         AddSuccessVo vo =  cartService.addToCart(skuId,num);
 
 
 
         return Result.ok(vo);
+    }
+
+    /**
+     * 删除选中的所有商品
+     * @return
+     */
+    @GetMapping("/delete/checked")
+    public Result deleteChecked(){
+
+        cartService.deleteChecked();
+
+        return Result.ok();
     }
 }
 

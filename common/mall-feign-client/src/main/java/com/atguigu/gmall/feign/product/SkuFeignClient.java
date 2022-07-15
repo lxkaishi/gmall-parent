@@ -40,4 +40,12 @@ public interface SkuFeignClient {
 
     @GetMapping("/cartinfo/{skuId}")
     Result<CartInfo> getCartInfoBySkuId(@PathVariable("skuId") Long skuId);
+
+    /**
+     * 实时获取价格：从数据
+     * @param skuId
+     * @return
+     */
+    @GetMapping("/sku/price/shishi/{skuId}")
+    public Result<BigDecimal> get1010SkuPrice(@PathVariable("skuId") Long skuId);
 }

@@ -32,4 +32,6 @@ public interface SkuInfoService extends IService<SkuInfo> {
     Goods getGoodsInfoBySkuId(Long skuId);
 
     CartInfo getCartInfoBySkuId(Long skuId);
+
+    BigDecimal get1010SkuPrice(Long skuId);
 }

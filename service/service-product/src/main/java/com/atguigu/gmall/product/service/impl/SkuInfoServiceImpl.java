@@ -186,6 +186,11 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo>
         return cartInfo;
 
     }
+
+    @Override
+    public BigDecimal get1010SkuPrice(Long skuId) {
+        return skuInfoMapper.getSkuPrice(skuId);
+    }
 }
 
 

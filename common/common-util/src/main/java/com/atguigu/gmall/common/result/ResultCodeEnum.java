@@ -31,6 +31,9 @@ public enum ResultCodeEnum {
     COUPON_GET(220, "优惠券已经领取"),
     COUPON_LIMIT_GET(221, "优惠券已发放完毕"),
     OUT_OF_CART(3000,"购物车数量已满，请先移除一些商品"),
+    ORDER_INVAILD_TOKEN(4000,"页面已经过期，请重新刷新确认"),
+    ORDER_ITEM_NO_STOCK(4001,"库存不足："),
+    ORDER_ITEM_PRICE_CHANGE(4002,"商品价格发生变化，请重新刷新页面。变化商品如下：")
     ;
 
     private Integer code;
